@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rap Score - Backstage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #1e1e1e, #2ecc71, #1abc9c);
+      color: #fff;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: #000;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-container img {
+      height: 50px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .logo-container span {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: url('https://images.unsplash.com/photo-1604605245553-3ec6b674e8f5?auto=format&fit=crop&w=1600&q=80') no-repeat center center / cover;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero * {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+    .hero img {
+      max-width: 160px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: white;
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+
+    .content {
+      background: #ffffff10;
+      color: white;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .content p {
+      line-height: 1.8;
+      color: white;
+    }
+
+    .icons-row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+
+    .icons-row div {
+      text-align: center;
+      max-width: 180px;
+      color: white;
+    }
+
+    .icons-row img {
+      width: 60px;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #2ecc71;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #27ae60;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="anton.html">
+        <img src="logotipoverde.png" alt="Logo Rap Score" />
+        <span>Rap Score</span>
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="logotipoverde.png" alt="Logo Rap Score" />
+    <h2>Conhece os Bastidores do Rap</h2>
+    <p>O Rap Score abre as portas para uma experiência única: ligação direta entre fãs e artistas, depois do espetáculo.</p>
+  </section>
+
+  <section class="content" id="sobre">
+    <h3 class="section-title">Mais que música, uma conexão real</h3>
+    <p>O Rap Score não se limita ao palco. Através de uma rede de bastidores e parceiros, aproximamos os fãs dos seus ídolos.</p>
+
+    <div class="icons-row">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1632/1632670.png" alt="Meet & Greet" />
+        <p>Meet & Greet com artistas</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3791/3791513.png" alt="Fotos Exclusivas" />
+        <p>Sessões de fotografia</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/2223/2223615.png" alt="Bastidores" />
+        <p>Acesso ao backstage</p>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1518972559570-0a55507b8a48?auto=format&fit=crop&w=1000&q=80" alt="Concerto Rap ao Vivo" />
+    <p>Esta iniciativa faz parte da plataforma <strong>Backstage</strong>, que liga produtores, artistas e o público em experiências únicas e verdadeiras.</p>
+  </section>
+
+  <section class="content" id="contacto">
+    <h3 class="section-title">Entra em contacto</h3>
+    <p>És artista ou produtor e queres participar no Rap Score? Entra em contacto connosco e vamos conversar sobre como levar o teu espetáculo para o próximo nível.</p>
+    <p>Email: <a href="mailto:info@backstage.com">info@backstage.com</a></p>
+  </section>
+
+  <div style="text-align: center;">
+    <a class="back-button" href="index.html">← Voltar à página principal</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Backstage - Rap Score. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publicidade - Backstage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e74c3c, #8e44ad);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header a.logo-link {
+      display: inline-block;
+    }
+    header .logo {
+      height: 70px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f1c40f;
+    }
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 3rem auto 4rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 3rem 2rem;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+    }
+    p.lead {
+      text-align: center;
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .top-illustration {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .top-illustration img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2.5rem;
+    }
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .service-card img {
+      width: 90px;
+      margin-bottom: 1.2rem;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .service-card h3 {
+      color: #3498db;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .service-card p {
+      color: #444;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+    .promo-video {
+      margin: 4rem auto 2rem;
+      text-align: center;
+    }
+    .promo-video iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+    .call-to-action {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .call-to-action a {
+      background-color: #e74c3c;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+    .call-to-action a:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+    footer .socials {
+      margin-top: 0.5rem;
+    }
+    footer .socials a {
+      margin: 0 12px;
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer .socials a:hover {
+      color: #3498db;
+    }
+
+    @media (max-width: 600px) {
+      .service-card img {
+        width: 70px;
+      }
+      .promo-video iframe {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="c:/Users/Aluno/Desktop/Dinis/LogotipoPrincipal.png" alt="Logo Backstage" class="logo" />
+    </a>
+    <nav>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#produtores">Produtores</a>
+      <a href="cadastro.html">Entrar</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="top-illustration">
+      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="Ilustração criativa de publicidade" />
+    </div>
+
+    <h1>Publicidade Criativa e Impactante</h1>
+    <p class="lead">
+      Na Backstage, conectamos marcas com talentos únicos para criar campanhas publicitárias autênticas, memoráveis e que realmente toquem o público.
+      Seja TV, redes sociais, ou anúncios digitais, oferecemos soluções personalizadas para o sucesso da tua marca.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Casting" />
+        <h3>Casting de Talentos</h3>
+        <p>Modelos, atores e influencers cuidadosamente selecionados para a tua campanha, alinhados com os valores da tua marca.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/929/929610.png" alt="Produção" />
+        <h3>Produção Publicitária</h3>
+        <p>Desde a criação à filmagem, damos apoio completo para que as tuas ideias ganhem vida com qualidade profissional.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Consultoria" />
+        <h3>Consultoria Personalizada</h3>
+        <p>Estratégias publicitárias ajustadas às tuas necessidades para maximizar impacto e alcance da tua campanha.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Social Media" />
+        <h3>Marketing Digital</h3>
+        <p>Promoção eficiente nas redes sociais com conteúdos criativos que envolvem o teu público-alvo.</p>
+      </div>
+    </div>
+
+    <div class="promo-video">
+      <iframe src="https://www.youtube.com/embed/9No-FiEInLA" title="Vídeo Promocional Backstage" allowfullscreen></iframe>
+    </div>
+
+    <div class="call-to-action">
+      <a href="index.html">Voltar ao Início</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Backstage. Todos os direitos reservados.</p>
+    <div class="socials">
+      <a href="#"><span>🌐</span></a>
+      <a href="#"><span>📸</span></a>
+      <a href="#"><span>🎥</span></a>
+    </div>
+  </footer>
+
+</body>
+</html>
+

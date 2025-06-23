@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Backstage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header a.logo-link {
+      display: inline-block;
+    }
+
+    header .logo {
+      height: 100px;
+      object-fit: contain;
+      display: block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #23d5ab;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581091012184-5c1b6f8ad074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      padding: 10rem 2rem;
+      text-align: center;
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out forwards;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .hero a {
+      background-color: #6c63ff;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero a:hover {
+      background-color: #574fd6;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      margin-top: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #222;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      max-width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .socials {
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #23d5ab;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="LogotipoPrincipal.png" alt="Logo Backstage" class="logo" />
+    </a>
+    <nav>
+      <a href="#servicos">Nossos Serviços</a>
+      <a href="#produtores">Para Produtores</a>
+      <a href="cadastro.html">Entrar</a>
+     <a href="objetivo.html">Ver Objetivo</a>
+     <a href="conteudos-digitais.html">conteudos-digitais</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Backstage</h2>
+    <p>Onde o espetáculo começa nos bastidores</p>
+    <a href="">Ver Serviços</a>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <a href="livenation.html" class="card" style="border-top: 6px solid #e63946; padding: 2rem 1.2rem;">
+        <img src="logotipovermelho.png" alt="Live Nations" />
+        <h3 style="color: #e63946;">Live Nations</h3>
+        <p>Parcerias para grandes espetáculos e eventos ao vivo. Tentar organizar vários concertos à volta do mundo!</p>
+      </a>
+      <a href="rapscore.html" class="card" style="border-top: 6px solid #2ecc71; padding: 2rem 1.2rem;">
+        <img src="logotipoverde.png" alt="Rap Score" />
+        <h3 style="color: #2ecc71;">Rap Score</h3>
+        <p>A empresa tenta contactar o artista para que os fãs, após o concerto, tentem conhecê-lo pessoalmente!</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="produtores">
+    <h2>Para Produtores</h2>
+    <div class="cards">
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <a href="parcerias.html">
+  <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=1000&q=80" 
+       alt="Parcerias de Produção" 
+       style="width: 100%; height: 150px; object-fit: cover;">
+</a>
+
+        <div style="padding: 1.5rem;">
+          <h3>Parcerias de Produção</h3>
+          <p><em>Colaborações para cinema, TV e eventos culturais</em></p>
+          <p>Estabelecemos ligações entre produtores e talentos promissores, com soluções criativas e profissionais para cada projeto. Junta-te à rede Backstage e dá vida às tuas ideias com os melhores parceiros do mercado.</p>
+        </div>
+      </div>
+      <div class="card">
+  <a href="publicidade.html">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Publicidade" />
+  </a>
+  <h3>Publicidade</h3>
+  <p>Conecta com vozes e rostos para a tua marca.</p>
+</div>
+
+      <div class="card">
+         <a href="conteudos-digitais.html">
+    <img src="https://cdn-icons-png.flaticon.com/512/2907/2907325.png" alt="Publicidade" />
+  </a>
+        <h3>Conteúdos Digitais</h3>
+        <p>Influencers e criadores de conteúdo à tua disposição.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Backstage. Todos os direitos reservados.</p>
+    <div class="socials">
+      <a href="#"><span>🌐</span></a>
+      <a href="#"><span>📸</span></a>
+      <a href="#"><span>🎥</span></a>
+    </div>
+  </footer>
+
+</body>
+</html>
